@@ -1,0 +1,325 @@
+<html>
+<head>
+<title>Game</title>
+<link rel="icon" href="Tic-Tac-Toe-Game.png" type="image/png">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript">
+var player = 1;
+var selected= 0;
+var flag1=true;
+var pla1 = sessionStorage.getItem("player1");
+var play = [" ",pla1,"CPU"];
+function win() {
+flag1=false;
+if(player==1)
+player=2;
+else
+player=1;
+alert(play[player]+" Wins");
+if(confirm("RePlay")==true) {
+alert("playing again");
+window.location="game2.html";
+}
+else {
+alert("Quit");
+window.location="index.html";
+}}
+function cpuMove() {
+var flag=true;
+
+var str1,str2,str3;
+str1=document.getElementById("0-0").innerHTML;
+str2=document.getElementById("0-1").innerHTML;
+str3=document.getElementById("0-2").innerHTML;
+if(flag&&str1==str2||str1==str3||str2==str3) {
+	flag=false;
+	if(str1==str2) {
+		document.getElementById(0+"-"+2).innerHTML="O";
+		document.getElementById(0+"-"+2).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else if(str1==str3) {
+		document.getElementById(0+"-"+1).innerHTML="O";
+		document.getElementById(0+"-"+1).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else {
+		document.getElementById(0+"-"+0).innerHTML="O";
+		document.getElementById(0+"-"+0).style.background = '#deb05a';
+		selected=selected+1;
+	}
+}
+str1=document.getElementById("0-0").innerHTML;
+str2=document.getElementById("1-0").innerHTML;
+str3=document.getElementById("2-0").innerHTML;
+if(flag&&str1==str2||str1==str3||str2==str3) {
+	flag=false;
+	if(str1==str2) {
+		document.getElementById(2+"-"+0).innerHTML="O";
+		document.getElementById(2+"-"+0).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else if(str1==str3) {
+		document.getElementById(1+"-"+0).innerHTML="O";
+		document.getElementById(1+"-"+0).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else {
+		document.getElementById(0+"-"+0).innerHTML="O";
+		document.getElementById(0+"-"+0).style.background = '#deb05a';
+		selected=selected+1;
+	}
+}
+str1=document.getElementById("0-0").innerHTML;
+str2=document.getElementById("1-1").innerHTML;
+str3=document.getElementById("2-2").innerHTML;
+if(flag&&str1==str2||str1==str3||str2==str3) {
+	flag=false;
+	if(str1==str2) {
+		document.getElementById(2+"-"+2).innerHTML="O";
+		document.getElementById(2+"-"+2).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else if(str1==str3) {
+		document.getElementById(1+"-"+1).innerHTML="O";
+		document.getElementById(1+"-"+1).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else {
+		document.getElementById(0+"-"+0).innerHTML="O";
+		document.getElementById(0+"-"+0).style.background = '#deb05a';
+		selected=selected+1;
+	}
+}
+str1=document.getElementById("1-0").innerHTML;
+str2=document.getElementById("1-1").innerHTML;
+str3=document.getElementById("1-2").innerHTML;
+if(flag&&str1==str2||str1==str3||str2==str3) {
+	flag=false;
+	if(str1==str2) {
+		document.getElementById(1+"-"+2).innerHTML="O";
+		document.getElementById(1+"-"+2).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else if(str1==str3) {
+		document.getElementById(1+"-"+1).innerHTML="O";
+		document.getElementById(1+"-"+1).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else {
+		document.getElementById(1+"-"+0).innerHTML="O";
+		document.getElementById(1+"-"+0).style.background = '#deb05a';
+		selected=selected+1;
+	}
+}
+str1=document.getElementById("0-1").innerHTML;
+str2=document.getElementById("1-1").innerHTML;
+str3=document.getElementById("2-1").innerHTML;
+if(flag&&str1==str2||str1==str3||str2==str3) {
+	flag=false;
+	if(str1==str2) {
+		document.getElementById(2+"-"+1).innerHTML="O";
+		document.getElementById(2+"-"+1).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else if(str1==str3) {
+		document.getElementById(1+"-"+1).innerHTML="O";
+		document.getElementById(1+"-"+1).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else {
+		document.getElementById(0+"-"+1).innerHTML="O";
+		document.getElementById(0+"-"+1).style.background = '#deb05a';
+		selected=selected+1;
+	}
+}
+str1=document.getElementById("2-0").innerHTML;
+str2=document.getElementById("2-1").innerHTML;
+str3=document.getElementById("2-2").innerHTML;
+if(flag&&str1==str2||str1==str3||str2==str3) {
+	flag=false;
+	if(str1==str2) {
+		document.getElementById(2+"-"+2).innerHTML="O";
+		document.getElementById(2+"-"+2).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else if(str1==str3) {
+		document.getElementById(2+"-"+1).innerHTML="O";
+		document.getElementById(2+"-"+1).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else {
+		document.getElementById(2+"-"+0).innerHTML="O";
+		document.getElementById(2+"-"+0).style.background = '#deb05a';
+		selected=selected+1;
+	}
+}
+str1=document.getElementById("0-2").innerHTML;
+str2=document.getElementById("1-2").innerHTML;
+str3=document.getElementById("2-2").innerHTML;
+if(flag&&str1==str2||str1==str3||str2==str3) {
+	flag=false;
+	if(str1==str2) {
+		document.getElementById(2+"-"+2).innerHTML="O";
+		document.getElementById(2+"-"+2).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else if(str1==str3) {
+		document.getElementById(1+"-"+2).innerHTML="O";
+		document.getElementById(1+"-"+2).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else {
+		document.getElementById(0+"-"+2).innerHTML="O";
+		document.getElementById(0+"-"+2).style.background = '#deb05a';
+		selected=selected+1;
+	}
+}
+str1=document.getElementById("0-2").innerHTML;
+str2=document.getElementById("1-1").innerHTML;
+str3=document.getElementById("2-0").innerHTML;
+if(flag&&str1==str2||str1==str3||str2==str3) {
+	flag=false;
+	if(str1==str2) {
+		document.getElementById(2+"-"+0).innerHTML="O";
+		document.getElementById(2+"-"+0).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else if(str1==str3) {
+		document.getElementById(1+"-"+1).innerHTML="O";
+		document.getElementById(1+"-"+1).style.background = '#deb05a';
+		selected=selected+1;
+	}
+	else {
+		document.getElementById(0+"-"+2).innerHTML="O";
+		document.getElementById(0+"-"+2).style.background = '#deb05a';
+		selected=selected+1;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+while(flag) {
+var i = (Math.floor((Math.random() * 10) + 1))%3;
+var j = (Math.floor((Math.random() * 10) + 1))%3;
+var st = document.getElementById(i+"-"+j).innerHTML;
+if(st.length==0) {
+document.getElementById(i+"-"+j).innerHTML="O";
+document.getElementById(i+"-"+j).style.background = '#deb05a';
+selected=selected+1;
+break;
+}
+}
+}
+function checkWinCondition(id) {
+var i;
+var j;
+var k;
+var l;
+	var flag=true;
+var str1=document.getElementById("0-0").innerHTML;
+	var str2=document.getElementById("0-1").innerHTML;
+var str3=document.getElementById("0-2").innerHTML;
+if((str1==str2&&str2==str3&&str1.length!=0)||(str1==str2&&str2==str3&&str1.length!=0)&&flag) {
+win();
+	flag=false;
+}
+	str1=document.getElementById("0-0").innerHTML;
+str2=document.getElementById("1-0").innerHTML;
+str3=document.getElementById("2-0").innerHTML;
+if((str1==str2&&str2==str3&&str1.length!=0)||(str1==str2&&str2==str3&&str1.length!=0)&&flag) {
+win();
+flag=false;
+}
+str1=document.getElementById("0-0").innerHTML;
+str2=document.getElementById("1-1").innerHTML;
+str3=document.getElementById("2-2").innerHTML;
+if((str1==str2&&str2==str3&&str1.length!=0)||(str1==str2&&str2==str3&&str1.length!=0)&&flag) {
+win();
+flag=false;
+}
+str1=document.getElementById("1-0").innerHTML;
+	str2=document.getElementById("1-1").innerHTML;
+str3=document.getElementById("1-2").innerHTML;
+if((str1==str2&&str2==str3&&str1.length!=0)||(str1==str2&&str2==str3&&str1.length!=0)&&flag) {
+win();
+flag=false;
+}
+	str1=document.getElementById("0-1").innerHTML;
+str2=document.getElementById("1-1").innerHTML;
+	str3=document.getElementById("2-1").innerHTML;
+if((str1==str2&&str2==str3&&str1.length!=0)||(str1==str2&&str2==str3&&str1.length!=0)&&flag) {
+win();
+flag=false;
+}
+	str1=document.getElementById("2-0").innerHTML;
+	str2=document.getElementById("2-1").innerHTML;
+	str3=document.getElementById("2-2").innerHTML;
+if((str1==str2&&str2==str3&&str1.length!=0)||(str1==str2&&str2==str3&&str1.length!=0)&&flag) {
+	win();
+flag=false;
+}
+str1=document.getElementById("0-2").innerHTML;
+	str2=document.getElementById("1-2").innerHTML;
+str3=document.getElementById("2-2").innerHTML;
+	if((str1==str2&&str2==str3&&str1.length!=0)||(str1==str2&&str2==str3&&str1.length!=0)&&flag) {
+	win();
+flag=false;
+}
+str1=document.getElementById("0-2").innerHTML;
+	str2=document.getElementById("1-1").innerHTML;
+str3=document.getElementById("2-0").innerHTML;
+if((str1==str2&&str2==str3&&str1.length!=0)||(str1==str2&&str2==str3&&str1.length!=0)&&flag) {
+	win();
+flag=false;
+}
+}
+function clickFunction(ele) {id = ele.id;	var i=id.charAt(0);var j=id.charAt(2);	var flag=true;	 var str=document.getElementById(id).innerHTML;
+if(str=="X"||str=="O") {	alert("invalid move");flag=false;	}
+if(flag) {	if(player==1) {document.getElementById(id).innerHTML="X";	document.getElementById(id).style.background = '#db5d5d';player = 2;selected=selected+1;	}}
+checkWinCondition(id);
+document.getElementById("displayPlayer").innerHTML=play[1];
+if(flag1) {
+if(selected==9) {
+alert("Draw");
+if(confirm("RePlay")==true) {
+alert("playing again");
+window.location="game2.html";
+}
+else {
+alert("Quit");
+window.location="index.html";
+}
+}
+checkWinCondition(id);
+cpuMove();
+player = 1;
+checkWinCondition(id);
+}}
+function setOnclick() {
+for(var i=0;i<3;i++){
+for(var j=0;j<3;j++) {
+var ele = document.getElementById(i+"-"+j);
+ele.addEventListener("click",function() {
+clickFunction(this);
+})}}}
+window.addEventListener("load" ,function() {
+document.getElementById("displayPlayer").innerHTML=play[1];
+setOnclick();
+});
+</script></head><body>
+<div> <h1><img alt="player.png" src="Tic-Tac-Toe-Game-grey.png" id="ttt-icon" />Tic Tac Toe</h1></div>
+<div id="player"><img alt="player.png" src="player.png" id="player-icon" /> Player <span id="displayPlayer"></span> move</div>
+<div>    <center>	<table id="tableid" >
+<tr><td id="0-0"></td><td id="0-1"></td><td id="0-2"></td></tr>
+	<tr><td id="1-0"></td><td id="1-1"></td><td id="1-2"></td></tr><tr><td id="2-0"></td><td id="2-1"></td><td id="2-2"></td></tr>
+	</table></center>
+</div><a href="index.html" id="submitbtn-quit">Quit</a></body></html>
